@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_07_06_193354) do
     t.string "name"
     t.string "description"
     t.string "url"
-    t.bigint "category_id"
+    t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_materials_on_category_id"

@@ -24,3 +24,5 @@ news = Category.create(name: "News")
 black_owned_businesses = Category.create(name: "Black-Owned Businesses")
 black_trans_resources = Category.create(name: "Black Trans Resources")
 other = Category.create(name: "Other")
+
+Material.create(name: "FAMM", description: "Attempting to create a more fair and effective justice system.", url: "https://famm.org/", category_id: criminal_justice_reform.id)
