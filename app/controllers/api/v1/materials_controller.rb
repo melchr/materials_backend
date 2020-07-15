@@ -8,5 +8,9 @@ class Api::V1::MaterialsController < ApplicationController
         material = Material.new(material_params)
     end
 
+    private
 
+    def material_params
+        params.require(:material).permit(:name, :description, :url, :category_id)
+    end
 end
