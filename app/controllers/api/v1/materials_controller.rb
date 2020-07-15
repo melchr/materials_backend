@@ -3,4 +3,10 @@ class Api::V1::MaterialsController < ApplicationController
         materials = Material.all
         render json: materials
     end
+
+    def create
+        material = Material.new(material_params)
+    end
+
+
 end
