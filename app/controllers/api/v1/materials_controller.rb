@@ -13,6 +13,16 @@ class Api::V1::MaterialsController < ApplicationController
         end
     end
 
+    def update
+        material = Material.find_by_id(params[:id])
+        material.update(material_params)
+        if material.save
+            render json: MaterialSerializer.new(material), status: :accepted
+        else
+          render json: { errors: material.errors.full_messages }, status: :unprocessable_entity
+        end
+    end
+
     private
 
     def material_params
