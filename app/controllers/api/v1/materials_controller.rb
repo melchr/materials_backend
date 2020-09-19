@@ -24,7 +24,7 @@ class Api::V1::MaterialsController < ApplicationController
     end
 
     def destroy
-        material = Material.find_by_id(params[:id])
+        material = Material.find(params[:id])
         material.destroy
         
     end
